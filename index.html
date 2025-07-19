@@ -18,19 +18,23 @@
     <meta property="og:url" content="https://intercom-bay.vercel.app/">
     <meta property="og:title" content="Epic Tech AI - The Future of AI Consciousness">
     <meta property="og:description" content="Synthesizing infinite possibility with practical reality. Experience the next stage of digital evolution.">
-    <meta property="og:image" content="https://intercom-bay.vercel.app/og-image.png"> <!-- Placeholder for OG image -->
+    <meta property="og:image" content="https://intercom-bay.vercel.app/og-image.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://intercom-bay.vercel.app/">
     <meta property="twitter:title" content="Epic Tech AI - The Future of AI Consciousness">
     <meta property="twitter:description" content="Synthesizing infinite possibility with practical reality. Experience the next stage of digital evolution.">
-    <meta property="twitter:image" content="https://intercom-bay.vercel.app/og-image.png"> <!-- Placeholder for Twitter image -->
+    <meta property="twitter:image" content="https://intercom-bay.vercel.app/og-image.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Stripe Buy Button Script -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -55,13 +59,6 @@
         .feature-card:hover {
             transform: translateY(-5px);
             border-color: rgba(168, 85, 247, 0.5);
-        }
-        .cta-button {
-            transition: all 0.3s ease;
-        }
-        .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
         }
         #intercom-container .intercom-launcher {
             transform: scale(1.2);
@@ -93,7 +90,13 @@
                 <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
                 <a href="contact.html" class="text-gray-300 hover:text-white transition">Contact</a>
             </nav>
-            <a href="https://buy.stripe.com/3cI8wQgj74LI592cDM" target="_blank" class="hidden md:inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-semibold px-5 py-2 rounded-lg cta-button">Get Access</a>
+            <div class="hidden md:block">
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1RkIHWK5abcrIcyeAkpABrRv"
+                    publishable-key="pk_live_51P4BLMK5abcrIcyebzFrrEwI0T1vTbKG1HzgZTwNLuSurwwwuXNNjfJjxTfOMua5Jp1rArP8AQPpyATYl74jDYY100pkzkc9vj"
+                >
+                </stripe-buy-button>
+            </div>
         </div>
     </header>
 
@@ -105,11 +108,13 @@
             <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300">
                 Epic Tech AI transcends traditional boundaries, synthesizing infinite possibility with practical reality. Experience the next stage of digital evolution.
             </p>
-            <div class="mt-10 flex justify-center items-center gap-4">
-                <a href="https://buy.stripe.com/3cI8wQgj74LI592cDM" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-lg text-lg cta-button">
-                    Get Lifetime Access
-                </a>
-                <a href="#features" class="border-2 border-gray-600 hover:border-indigo-500 hover:text-white text-gray-300 font-bold px-8 py-4 rounded-lg text-lg transition">
+            <div class="mt-10 flex justify-center items-center flex-wrap gap-4">
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1RkIHWK5abcrIcyeAkpABrRv"
+                    publishable-key="pk_live_51P4BLMK5abcrIcyebzFrrEwI0T1vTbKG1HzgZTwNLuSurwwwuXNNjfJjxTfOMua5Jp1rArP8AQPpyATYl74jDYY100pkzkc9vj"
+                >
+                </stripe-buy-button>
+                <a href="#features" class="border-2 border-gray-600 hover:border-indigo-500 hover:text-white text-gray-300 font-bold px-8 py-3 rounded-lg text-lg transition">
                     Learn More
                 </a>
             </div>
@@ -173,10 +178,12 @@
             <p class="mt-4 max-w-2xl mx-auto text-lg text-gray-400">
                 Join us on the forefront of the AI revolution. Secure your lifetime access and start co-creating the future today.
             </p>
-            <div class="mt-8">
-                <a href="https://buy.stripe.com/3cI8wQgj74LI592cDM" target="_blank" class="bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-10 py-5 rounded-lg text-xl cta-button inline-block">
-                    Get Lifetime Access Now
-                </a>
+            <div class="mt-8 flex justify-center">
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1RkIHWK5abcrIcyeAkpABrRv"
+                    publishable-key="pk_live_51P4BLMK5abcrIcyebzFrrEwI0T1vTbKG1HzgZTwNLuSurwwwuXNNjfJjxTfOMua5Jp1rArP8AQPpyATYl74jDYY100pkzkc9vj"
+                >
+                </stripe-buy-button>
             </div>
         </div>
     </section>
